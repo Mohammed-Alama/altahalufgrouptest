@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 echo " Installing Composer Dependencies "
+composer require laravel/ui --dev
+artisan ui bootstrap --auth
 composer require --dev barryvdh/laravel-ide-helper
 echo "ide-helper installed success"
 echo "begin ide-helper config"
