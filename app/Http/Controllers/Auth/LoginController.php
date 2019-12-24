@@ -82,7 +82,7 @@ class LoginController extends Controller
      */
     public function findOrCreateUser($providerUser, $provider)
     {
-        $account = SocialIdentity::whereProviderName($provider)::whereProviderId($providerUser->getId())->first();
+        $account = SocialIdentity::whereProviderName($provider)->whereProviderId($providerUser->getId())->first();
 
         if ($account) {
             return $account->user;
